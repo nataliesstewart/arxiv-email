@@ -131,15 +131,6 @@ html_top = """\
 		<h1>Daily Math Feed: """ + str(today.strftime("%B %d, %Y")) + """</h1>
 	</div>
 
-<!--<div class="container">
-	<h1>TESTING</h1>
-  <img src="cid:image1" alt="math-banner" style="width:inherit;">
-  
-</div> -->
-
-
-
-
 	<br>
 	<div id="body">
 """
@@ -244,10 +235,7 @@ msg['To'] = you
 text = text_top + rss_text
 html = html_top + rss_html + html_bottom
 
-
-###
-# Uncomment the following for testing:
-
+### Uncomment the following lines for testing:
 # testingpage = open('test.html','w')
 # testingpage.write(html)
 
@@ -263,14 +251,6 @@ part2 = MIMEText(html, 'html')
 # the HTML message, is best and preferred.
 msg.attach(part1)
 msg.attach(part2)
-
-
-fp = open('math-banner-800.png', 'rb')
-msgImage = MIMEImage(fp.read())
-fp.close()
-
-msgImage.add_header('Content-ID', '<image1>')
-msg.attach(msgImage)
 
 # Send the message via local SMTP server.
 mail = smtplib.SMTP('smtp.gmail.com', 587)
