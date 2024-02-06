@@ -9,6 +9,7 @@ This sends an automated HTML-formatted email using arXiv's API. Installation ins
 * `GMAIL_USER` - this is the email that will send your daily emails
 * `GMAIL_PASSWORD` - the app password for that email
 * `RECIPIENT` - the email address where you want to receive arXiV subscriptions
+4. In `.github/workflows/math-email.yml` remove the last step, i.e. everything at/below "`- name: freeloaders`". You can also safely remove the file `freeloaders.py`. This is for me to send arxiv emails to friends who are too lazy to fork this repo 😃
 
 And you're good to go!
 
