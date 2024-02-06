@@ -3,7 +3,7 @@ name: math-email-dev
 on:
   push:
     branches:
-      - dev
+    - dev
 
 jobs:
   build:
