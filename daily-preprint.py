@@ -5,7 +5,6 @@
 subscriptions = ["math.AT","math.AG"]
 
 
-
 import csv
 import feedparser
 from datetime import date
@@ -260,32 +259,32 @@ text = text_top + rss_text
 html = html_top + rss_html + html_bottom
 
 ### Uncomment the following lines for testing:
-testingpage = open('test.html','w')
-testingpage.write(html)
+# testingpage = open('test.html','w')
+# testingpage.write(html)
 
 
 
 
-# # Record the MIME types of both parts,text/plain and text/html.
-# part1 = MIMEText(text, 'plain')
-# part2 = MIMEText(html, 'html')
+# Record the MIME types of both parts,text/plain and text/html.
+part1 = MIMEText(text, 'plain')
+part2 = MIMEText(html, 'html')
 
-# # Attach parts into message container.
-# # According to RFC 2046, the last part of a multipart message, in this case
-# # the HTML message, is best and preferred.
-# msg.attach(part1)
-# msg.attach(part2)
+# Attach parts into message container.
+# According to RFC 2046, the last part of a multipart message, in this case
+# the HTML message, is best and preferred.
+msg.attach(part1)
+msg.attach(part2)
 
-# # Send the message via local SMTP server.
-# mail = smtplib.SMTP('smtp.gmail.com', 587)
+# Send the message via local SMTP server.
+mail = smtplib.SMTP('smtp.gmail.com', 587)
 
-# mail.ehlo()
+mail.ehlo()
 
-# mail.starttls()
+mail.starttls()
 
-# mail.login(USER, PASSWORD)
-# mail.sendmail(me, you, msg.as_string())
-# mail.quit()
+mail.login(USER, PASSWORD)
+mail.sendmail(me, you, msg.as_string())
+mail.quit()
 
 
 
