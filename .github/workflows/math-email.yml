@@ -16,6 +16,10 @@ on:
     # * is a special character in YAML so you have to quote this string
     - cron:  '0 10 * * 1-5'
 
+  push:
+    branches:
+      - dev
+
 
 
 jobs:
