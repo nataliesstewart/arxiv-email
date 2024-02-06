@@ -1,8 +1,6 @@
 from emailgen import *
 import os
 from dotenv import load_dotenv
-
-
 load_dotenv(".env")
 
 
@@ -10,9 +8,15 @@ load_dotenv(".env")
 USER = os.environ.get("GMAIL_USER")
 PASSWORD = os.environ.get("GMAIL_PASSWORD")
 
-FREELOADERS = os.environ.get("FREELOADERS")
+def subs_to_list(subs):
+	return subs.split(',')
 
-for person in FREELOADERS:
-	recipient = person[0]
-	subscription_prefs = person[1]
-	send_email(recipient,subscription_prefs,USER,PASSWORD)
+
+LPEMAIL = os.environ.get("LPEMAIL")
+LPSUBS = os.environ.get("LPSUBS")
+send_email(LPEMAIL,subs_to_list(LPSUBS),USER,PASSWORD)
+
+MPEMAIL = os.environ.get("MPEMAIL")
+MPSUBS = os.environ.get("MPSUBS")
+send_email(MPEMAIL,subs_to_list(MPSUBS),USER,PASSWORD)
+
