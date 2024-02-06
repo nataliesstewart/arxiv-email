@@ -288,7 +288,6 @@ subscriptions = ["math.AT","math.AG"]
 send_email(RECIPIENT,subscriptions,USER,PASSWORD)
 
 
-
 ######################################################
 
 # References:
