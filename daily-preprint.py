@@ -1,4 +1,4 @@
-from generate-email import send_email
+from emailgen import *
 import os
 from dotenv import load_dotenv
 
