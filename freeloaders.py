@@ -9,7 +9,7 @@ USER = os.environ.get("GMAIL_USER")
 PASSWORD = os.environ.get("GMAIL_PASSWORD")
 
 def subs_to_list(subs):
-	return subs.split(',')
+	return str(subs).split(',')
 
 
 LPEMAIL = os.environ.get("LPEMAIL")
