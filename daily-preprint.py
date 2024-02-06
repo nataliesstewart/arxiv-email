@@ -276,7 +276,6 @@ def send_email(recipient_email,subscription_preferences,sender_email,sender_pass
 import os
 from dotenv import load_dotenv
 
-
 load_dotenv(".env")
 
 USER = os.environ.get("GMAIL_USER")
