@@ -1,21 +1,9 @@
-name: math-email
+name: math-email-dev
 
 on:
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning' 
-        type: choice
-        options:
-        - info
-        - warning
-        - debug 
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '0 10 * * 1-5'
-
+  push:
+    branches:
+      - dev
 
 jobs:
   build:
@@ -35,7 +23,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
-      - name: execute py script
+      - name: execute py script # run sj-gobierno.py to get the latest data
         env: 
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}

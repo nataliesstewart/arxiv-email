@@ -1,2 +1,4 @@
 .env
 *.html
+.DS_Store
+friends.txt
