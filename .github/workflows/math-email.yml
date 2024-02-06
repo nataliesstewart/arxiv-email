@@ -41,5 +41,4 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
           RECIPIENT: ${{ secrets.RECIPIENT }}
-        run: python daily-preprint.py
-        run: python freeloaders.py
+        run: python daily-preprint.py; python freeloaders.py
