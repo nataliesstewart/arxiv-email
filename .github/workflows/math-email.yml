@@ -48,8 +48,5 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
           RECIPIENT: ${{ secrets.RECIPIENT }}
-          LPEMAIL: ${{ secrets.LPEMAIL }}
-          LPSUBS: ${{ secrets.LPSUBS }}
-          MPEMAIL: ${{ secrets.MPEMAIL }}
-          MPSUBS: ${{ secrets.MPSUBS }}
+          FREELOADERS: ${{ secrets.FREELOADERS }}
         run: python freeloaders.py

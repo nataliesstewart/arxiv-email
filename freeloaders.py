@@ -8,15 +8,17 @@ load_dotenv(".env")
 USER = os.environ.get("GMAIL_USER")
 PASSWORD = os.environ.get("GMAIL_PASSWORD")
 
-def subs_to_list(subs):
-	return str(subs).split(',')
+FRELOADERS = os.environ.get("FREELOADERS")
 
 
-LPEMAIL = os.environ.get("LPEMAIL")
-LPSUBS = os.environ.get("LPSUBS")
-send_email(LPEMAIL,subs_to_list(LPSUBS),USER,PASSWORD)
+# tbraz56@gmail.com,math.AT,math.AG
+# tbraz56+1@gmail.com,math.NT
 
-MPEMAIL = os.environ.get("MPEMAIL")
-MPSUBS = os.environ.get("MPSUBS")
-send_email(MPEMAIL,subs_to_list(MPSUBS),USER,PASSWORD)
+
+print('freeloaders var is ' + str(FRELOADERS))
+
+list_of_recipients = FRELOADERS.split('\n')
+print(' list of recipients is ' + str(list_of_recipients))
+
+
 
