@@ -77,9 +77,11 @@ def send_email(recipient_email,subscription_preferences,sender_email,sender_pass
 				display: inline;
 				color: white;
 				border-radius: 8px;
-				padding: 1px;
+				padding: 2px;
 				font-size: 10px;
 				margin: 2px;
+				padding-left: 4px;
+  				padding-right: 4px;
 			}
 
 			#tag{
@@ -215,7 +217,7 @@ def send_email(recipient_email,subscription_preferences,sender_email,sender_pass
 			entry_html = entry_html + '<br>\n\t<b> Authors: </b>' + author_str
 
 			# Add summary
-			entry_html = entry_html	+ '<br>\n\t\t' + str(entry.summary) + '</div>\n<hr>'
+			entry_html = entry_html	+ '<br>\n\t\t<b>Abstract: </b>' + str(entry.summary) + '</div>\n<hr>'
 
 
 			# Add alternative text version of email
