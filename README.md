@@ -1,7 +1,10 @@
 # arxiv-email
  
-This sends an automated HTML-formatted email using arXiv's API. Installation instructions are below.
+This repo contains a bot, which sends daily HTML-formatted arXiv emails
 
+<img width="667" alt="arxiv-email" src="https://github.com/tbrazel/arxiv-email/assets/42276623/082de276-3624-4b3e-9e87-97426b165aff">
+
+# Installation
 
 1. Fork this repository
 2. Make sure you have your gmail credentials ready to go. It may not work unless you set up a [new app password](https://support.google.com/mail/answer/185833?hl=en-GB) on gmail (if you can't find this, use "Search Google Account").
@@ -13,4 +16,4 @@ This sends an automated HTML-formatted email using arXiv's API. Installation ins
 
 And you're good to go!
 
-In order to change your subscription services, change the list at the top of `daily_preprint.py`. Emails go out at 5:00 UTC (midnight ET).
+In order to change your subscription services, change the `subscriptions` variable in `daily_preprint.py`. Emails go out at 5:00 UTC (midnight ET).
