@@ -1,4 +1,6 @@
 # arxiv-email
+
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/tbrazel/arxiv-email/math-email.yml)
  
 This repo contains a bot, which sends daily HTML-formatted arXiv emails
 
