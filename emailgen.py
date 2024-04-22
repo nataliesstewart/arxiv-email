@@ -217,7 +217,8 @@ def send_email(recipient_email,subscription_preferences,sender_email,sender_pass
 			entry_html = entry_html + '<br>\n\t<b> Authors: </b>' + author_str
 
 			# Add summary
-			entry_html = entry_html	+ '<br>\n\t\t<b>Abstract: </b>' + str(entry.summary) + '</div>\n<hr>'
+			abstract = str(entry.summary).split('Abstract: ')[1]
+			entry_html = entry_html	+ '<br>\n\t\t<b>Abstract: </b>' + abstract + '</div>\n<hr>'
 
 
 			# Add alternative text version of email
