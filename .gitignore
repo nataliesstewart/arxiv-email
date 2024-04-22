@@ -2,3 +2,4 @@
 *.html
 .DS_Store
 friends.txt
+__pycache__/
