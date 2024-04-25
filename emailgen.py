@@ -246,7 +246,10 @@ def send_email(recipient_email,subscription_preferences,sender_email,sender_pass
 	text = text_top + rss_text
 	html = html_top + rss_html + html_bottom
 
-	### Uncomment the following lines for testing:
+	# print('HTML is :')
+	# print(html)
+
+	# ### Uncomment the following lines for testing:
 	# testingpage = open('test.html','w')
 	# testingpage.write(html)
 
