@@ -266,13 +266,13 @@ def send_email(recipient_email,subscription_preferences,sender_email,sender_pass
 	# Send the message via local SMTP server.
 	mail = smtplib.SMTP('smtp.gmail.com', 587)
 
-	# mail.ehlo()
+	mail.ehlo()
 
-	# mail.starttls()
+	mail.starttls()
 
-	# mail.login(sender_email, sender_password)
-	# mail.sendmail(sender_email, recipient_email, msg.as_string())
-	# mail.quit()
+	mail.login(sender_email, sender_password)
+	mail.sendmail(sender_email, recipient_email, msg.as_string())
+	mail.quit()
 
 ######################################################
 
